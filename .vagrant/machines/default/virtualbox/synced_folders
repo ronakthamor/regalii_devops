@@ -1,0 +1,1 @@
+{"rsync":{"/var/www/":{"type":"rsync","guestpath":"/var/www","hostpath":"C:/tools/cygwin/home/ronak/regalii/sync_data","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}},"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/tools/cygwin/home/ronak/regalii","disabled":false,"__vagrantfile":true}}}
