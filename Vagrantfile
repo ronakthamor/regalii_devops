@@ -26,8 +26,8 @@ Vagrant.configure("2") do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # config.vm.network "forwarded_port", guest: 80, host: 8080
   # config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "127.0.0.1", id: 'apache_http'
-  # config.vm.network "forwarded_port", guest: 443, host: 443, host_ip: "127.0.0.1", id: 'apache_https'
-  # config.vm.network "forwarded_port", guest: 22, host: 22, host_ip: "127.0.0.1", id: 'ssh'
+  config.vm.network :forwarded_port, guest: 4567, host: 4567, host_ip: "127.0.0.1"
+  config.vm.network :forwarded_port, guest: 9292, host: 9292, host_ip: "127.0.0.1"
   
 
   # Create a private network, which allows host-only access to the machine
@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
-	vb.name = "webserver"
+	vb.name = "regalii"
 	vb.memory = "2048"
 	vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
   end
